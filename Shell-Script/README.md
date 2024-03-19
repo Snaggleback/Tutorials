@@ -11,6 +11,49 @@ Aqui você irá encontrar tudo sobre de Shell Script desde sobre a linguagem à 
 -   O conceito de **Shell Script** remonta aos primeiros sistemas **_Unix_**, que foram **desenvolvidos na década de 1960 e 1970** por programadores na **Bell Labs**, como **Ken Thompson**, **Dennis Ritchie**, e outros. Desde então, o Shell Script tem sido uma **parte fundamental dos sistemas _Unix_ e _Unix-like_**, sendo adaptado e aprimorado ao longo do tempo
 -   Seu objetivo principal é oferecer uma maneira de **automatizar tarefas** do sistema operacional e **facilitar a interação com o ambiente** _Unix-like_ por meio de comandos e scripts. Com Shell Script, os usuários podem criar scripts para realizar uma variedade de tarefas, desde operações simples de manipulação de arquivos até scripts mais complexos de gerenciamento de sistemas
 
+Tópicos:
+
+- [Tudo sobre Shell Script](#tudo-sobre-shell-script)
+  - [Introdução](#introdução)
+  - [Como executar um arquivo `.sh`?](#como-executar-um-arquivo-sh)
+    - [Reconhecimento automático de arquivos](#reconhecimento-automático-de-arquivos)
+  - [Variáveis e convenções de nomes](#variáveis-e-convenções-de-nomes)
+    - [Variáveis especiais e de ambiente](#variáveis-especiais-e-de-ambiente)
+  - [Operadores](#operadores)
+    - [Operadores aritméticos](#operadores-aritméticos)
+    - [Operadores relacionais](#operadores-relacionais)
+    - [Operadores lógicos](#operadores-lógicos)
+    - [Operadores de atribuição](#operadores-de-atribuição)
+    - [Outros operadores](#outros-operadores)
+  - [Construtores de controle de fluxo](#construtores-de-controle-de-fluxo)
+    - [Comparações](#comparações)
+      - [Estrutura `case`](#estrutura-case)
+    - [Estruturas de repetição](#estruturas-de-repetição)
+      - [Estrutura `for`](#estrutura-for)
+      - [Estrutura `while`](#estrutura-while)
+      - [Estrutura `until`](#estrutura-until)
+      - [Controle de fluxo com `break` e `continue`](#controle-de-fluxo-com-break-e-continue)
+  - [Tipos de dados](#tipos-de-dados)
+    - [Números inteiros](#números-inteiros)
+    - [Texto (_Strings_)](#texto-strings)
+      - [Acessando caracteres específicos](#acessando-caracteres-específicos)
+      - [Mecanismos de cotação](#mecanismos-de-cotação)
+    - [Números decimais (_Floats_)](#números-decimais-floats)
+    - [_Booleans_](#booleans)
+    - [_Arrays_](#arrays)
+      - [Declaração](#declaração)
+      - [Acessando elementos](#acessando-elementos)
+      - [Número de elementos](#número-de-elementos)
+      - [Iterando sobre um](#iterando-sobre-um)
+      - [Manipulação](#manipulação)
+  - [Funções](#funções)
+    - [Definindo](#definindo)
+    - [Chamando](#chamando)
+    - [Passagem de parâmetros](#passagem-de-parâmetros)
+    - [Retorno de valores](#retorno-de-valores)
+    - [Escopo de variáveis](#escopo-de-variáveis)
+    - [Benefícios das funções](#benefícios-das-funções)
+
 ## Como executar um arquivo `.sh`?
 
 Para executar um arquivo Shell Script, siga estes passos simples:
@@ -53,7 +96,9 @@ Aqui está um exemplo de definição de variável:
 nome="Shell Script"
 ```
 
-## Variáveis especiais e de ambiente
+### Variáveis especiais e de ambiente
+
+---
 
 Além das variáveis comuns, existem várias **variáveis especiais** disponíveis em Shell Script que fornecem informações úteis sobre a execução do script:
 
@@ -86,7 +131,7 @@ Essas variáveis de ambiente são frequentemente utilizadas em scripts para **ad
 
 Os operadores **aritméticos** realizam **operações matemáticas**. Operadores **relacionais** **comparam valores**. Operadores **lógicos** combinam **expressões lógicas**. Operadores de **atribuição** **atribuem valores** a variáveis e podem realizar operações combinadas. Outros operadores incluem **redirecionamento de entrada e saída**, além de **teste de igualdade e desigualdade**. Todos esses operadores são essenciais para manipular dados e controlar o fluxo de execução em scripts de Shell
 
-### Operadores Aritméticos
+### Operadores aritméticos
 
 -   `+` : **Soma**
     -   Soma dois números
@@ -655,3 +700,5 @@ minha_funcao "João"
 -   **Reutilização de Código:** Você pode definir uma função uma vez e usá-la várias vezes em seu script
 -   **Organização do Código:** Funções permitem dividir o código em partes menores e mais gerenciáveis, facilitando a manutenção
 -   **Legibilidade:** Ao atribuir tarefas específicas a funções com nomes descritivos, o código se torna mais fácil de entender e depurar
+
+Parabéns por chegar até o final! :) Se encontrar algum erro, sinta-se à vontade para abrir um problema ou contribuir com o projeto
