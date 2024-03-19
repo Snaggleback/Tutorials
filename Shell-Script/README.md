@@ -22,7 +22,7 @@ Para executar um arquivo Shell Script, siga estes passos simples:
 5. Torne o arquivo executável com o comando: `chmod +x meu_script.sh`
 6. Execute o script digitando `./meu_script.sh` no terminal e pressionando Enter
 
-### Reconhecimento Automático de Arquivos
+### Reconhecimento automático de arquivos
 
 ---
 
@@ -107,7 +107,7 @@ Os operadores **aritméticos** realizam **operações matemáticas**. Operadores
     -   Eleva um número a uma potência
     -   Exemplo: `2 ** 3` resulta em `8`
 
-### Operadores Relacionais
+### Operadores relacionais
 
 -   `-eq` : **Igual a**
     -   Verifica se dois valores são iguais
@@ -128,7 +128,7 @@ Os operadores **aritméticos** realizam **operações matemáticas**. Operadores
     -   Verifica se o primeiro valor é menor ou igual ao segundo
     -   Exemplo: `3 -le 5` retorna verdadeiro
 
-### Operadores Lógicos
+### Operadores lógicos
 
 -   `&&` : **E lógico**
     -   Combina duas condições onde ambas precisam ser verdadeiras
@@ -140,7 +140,7 @@ Os operadores **aritméticos** realizam **operações matemáticas**. Operadores
     -   Inverte o resultado de uma condição
     -   Exemplo: `!(2 -eq 3)` retorna verdadeiro
 
-### Operadores de Atribuição
+### Operadores de atribuição
 
 -   `=` : **Atribuição**
     -   Atribui um valor a uma variável
@@ -158,7 +158,7 @@ Os operadores **aritméticos** realizam **operações matemáticas**. Operadores
     -   Divide uma variável existente por um valor
     -   Exemplo: `x/=2` onde `x` é 10, resulta em `x` igual a 5
 
-### Outros Operadores
+### Outros operadores
 
 -   `>` : **Redirecionamento de saída**
     -   Redireciona a saída padrão de um comando para um arquivo
@@ -207,7 +207,7 @@ fi
 Neste caso, estamos verificando se `$x` é diferente de `$y`. Se forem diferentes, o comando `echo` será executado  
 Esses são apenas alguns exemplos de como esses operadores podem ser usados em diferentes contextos em Shell Script. Eles são fundamentais para realizar comparações e tomar decisões dentro dos scripts
 
-## Construtores de Controle de Fluxo
+## Construtores de controle de fluxo
 
 Shell Script oferece uma variedade de construtores de controle de fluxo para realizar decisões e repetições, proporcionando flexibilidade e poder de automação aos scripts
 
@@ -272,7 +272,7 @@ No exemplo acima:
 A estrutura `case` é especialmente útil quando há **várias opções a serem consideradas** e simplifica o código em comparação com múltiplos `if` e `elif`. Ela é amplamente utilizada em scripts de Shell Script para lidar com várias condições de forma clara e concisa  
 Neste exemplo, o script executa um bloco de código dependendo do valor da variável `opcao`
 
-### Estruturas de Repetição
+### Estruturas de repetição
 
 As estruturas de repetição em Shell Script são fundamentais para executar blocos de código **repetidamente** com base em certas **condições** ou **iterações**. Aqui estão os principais construtores de repetição em Shell Script:
 
@@ -326,7 +326,7 @@ done
 Neste caso, o script continua a imprimir o valor do contador até que ele seja igual a 5  
 Essas estruturas de repetição são essenciais para automatizar tarefas repetitivas e criar scripts Shell Script eficazes. Elas oferecem grande poder e flexibilidade na automação de processos e são amplamente utilizadas em scripts de gerenciamento de sistemas e automação de tarefas
 
-#### Controle de Fluxo com `break` e `continue`
+#### Controle de fluxo com `break` e `continue`
 
 ---
 
@@ -363,7 +363,7 @@ Claro, vou explicar de forma mais detalhada sobre os tipos de dados em Shell Scr
 
 Os tipos de dados em Shell Script são formas de categorizar e organizar as informações que o programa manipula. Cada tipo de dado tem características específicas e pode ser utilizado para diferentes propósitos
 
-### Números Inteiros
+### Números inteiros
 
 ---
 
@@ -430,7 +430,7 @@ Aqui, o comando `ls` é executado e a saída é atribuída à variável `files`
 
 Cada tipo de cotação tem seu propósito específico e é importante escolher o tipo certo dependendo do que você deseja realizar no seu script
 
-### Números Decimais (_Floats_)
+### Números decimais (_Floats_)
 
 ---
 
@@ -572,7 +572,7 @@ Para chamar uma função, basta usar seu nome seguido pelos parâmetros (se defi
 minha_funcao "João"
 ```
 
-### Passagem de Parâmetros
+### Passagem de parâmetros
 
 ---
 
@@ -605,13 +605,13 @@ outra_funcao "Maria" "João"
 
 Neste exemplo, a função `outra_funcao` tem dois parâmetros `$1` e `$2`, que são usados para exibir uma saudação personalizada para dois nomes. Quando a função é chamada com `"Maria"` e `"João"` como argumentos, eles são passados para `$1` e `$2` respectivamente, e a saída será "Olá, Maria e João! Bem-vindos ao mundo de Shell Script."
 
-### Retorno de Valores
+### Retorno de valores
 
 ---
 
 Shell Script não suporta explicitamente o retorno de valores de funções como em outras linguagens de programação. No entanto, você pode usar a saída padrão (`echo`) para retornar valores
 
-### Escopo de Variáveis
+### Escopo de variáveis
 
 ---
 
@@ -648,7 +648,7 @@ minha_funcao() {
 minha_funcao "João"
 ```
 
-### Benefícios das Funções
+### Benefícios das funções
 
 ---
 
