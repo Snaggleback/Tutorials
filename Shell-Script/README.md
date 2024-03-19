@@ -11,6 +11,8 @@ Aqui você irá encontrar tudo sobre de Shell Script desde sobre a linguagem à 
 -   O conceito de **Shell Script** remonta aos primeiros sistemas **_Unix_**, que foram **desenvolvidos na década de 1960 e 1970** por programadores na **Bell Labs**, como **Ken Thompson**, **Dennis Ritchie**, e outros. Desde então, o Shell Script tem sido uma **parte fundamental dos sistemas _Unix_ e _Unix-like_**, sendo adaptado e aprimorado ao longo do tempo
 -   Seu objetivo principal é oferecer uma maneira de **automatizar tarefas** do sistema operacional e **facilitar a interação com o ambiente** _Unix-like_ por meio de comandos e scripts. Com Shell Script, os usuários podem criar scripts para realizar uma variedade de tarefas, desde operações simples de manipulação de arquivos até scripts mais complexos de gerenciamento de sistemas
 
+> Nota: O único requisito para ler este "Tudo sobre" é ter uma base em lógica de programação
+
 Tópicos:
 
 - [Tudo sobre Shell Script](#tudo-sobre-shell-script)
