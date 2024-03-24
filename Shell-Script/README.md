@@ -1,15 +1,15 @@
 # Tudo sobre Shell Script
 
--   **Shell Script** é uma linguagem de script utilizada principalmente em sistemas **_Unix_** e **_Unix-like_** para **automatizar tarefas** do sistema operacional. Ela é interpretada por um shell, que é a interface de linha de comando do sistema operacional
--   O termo "_shell_" refere-se à **interface de linha de comando** de um sistema operacional. O "_script_" refere-se a um conjunto de comandos escritos em um arquivo de texto que são interpretados e executados em sequência pelo shell
+- **Shell Script** é uma linguagem de script utilizada principalmente em sistemas **_Unix_** e **_Unix-like_** para **automatizar tarefas** do sistema operacional. Ela é interpretada por um shell, que é a interface de linha de comando do sistema operacional
+- O termo "_shell_" refere-se à **interface de linha de comando** de um sistema operacional. O "_script_" refere-se a um conjunto de comandos escritos em um arquivo de texto que são interpretados e executados em sequência pelo shell
 
 ## Introdução
 
 Aqui você irá encontrar tudo sobre de Shell Script desde sobre a linguagem à exemplos, boas práticas, nomenclatura de variáveis, execução de arquivos `.sh`, definição de variáveis e convenções de nomes, variáveis especiais, construtores de controle de fluxo, comparações, loops, break e continue, operadores, substituições, arrays, outros tipos de dados, definição e uso de funções, mecanismos de cotação e mais
 
--   O **Shell Script** foi desenvolvido para **facilitar a automação de tarefas repetitivas**, a **manipulação de arquivos**, o **gerenciamento de processos** e a **interação com o sistema operacional** de forma programática
--   O conceito de **Shell Script** remonta aos primeiros sistemas **_Unix_**, que foram **desenvolvidos na década de 1960 e 1970** por programadores na **Bell Labs**, como **Ken Thompson**, **Dennis Ritchie**, e outros. Desde então, o Shell Script tem sido uma **parte fundamental dos sistemas _Unix_ e _Unix-like_**, sendo adaptado e aprimorado ao longo do tempo
--   Seu objetivo principal é oferecer uma maneira de **automatizar tarefas** do sistema operacional e **facilitar a interação com o ambiente** _Unix-like_ por meio de comandos e scripts. Com Shell Script, os usuários podem criar scripts para realizar uma variedade de tarefas, desde operações simples de manipulação de arquivos até scripts mais complexos de gerenciamento de sistemas
+- O **Shell Script** foi desenvolvido para **facilitar a automação de tarefas repetitivas**, a **manipulação de arquivos**, o **gerenciamento de processos** e a **interação com o sistema operacional** de forma programática
+- O conceito de **Shell Script** remonta aos primeiros sistemas **_Unix_**, que foram **desenvolvidos na década de 1960 e 1970** por programadores na **Bell Labs**, como **Ken Thompson**, **Dennis Ritchie**, e outros. Desde então, o Shell Script tem sido uma **parte fundamental dos sistemas _Unix_ e _Unix-like_**, sendo adaptado e aprimorado ao longo do tempo
+- Seu objetivo principal é oferecer uma maneira de **automatizar tarefas** do sistema operacional e **facilitar a interação com o ambiente** _Unix-like_ por meio de comandos e scripts. Com Shell Script, os usuários podem criar scripts para realizar uma variedade de tarefas, desde operações simples de manipulação de arquivos até scripts mais complexos de gerenciamento de sistemas
 
 > Nota: O único requisito para ler este "Tudo sobre" é ter uma base em lógica de programação
 
@@ -55,6 +55,7 @@ Tópicos:
     - [Retorno de valores](#retorno-de-valores)
     - [Escopo de variáveis](#escopo-de-variáveis)
     - [Benefícios das funções](#benefícios-das-funções)
+  - [Fontes e referências](#fontes-e-referências)
 
 ## Como executar um arquivo `.sh`?
 
@@ -104,28 +105,28 @@ nome="Shell Script"
 
 Além das variáveis comuns, existem várias **variáveis especiais** disponíveis em Shell Script que fornecem informações úteis sobre a execução do script:
 
--   `$0`: Representa o nome do próprio script
--   `$1`, `$2`, etc.: Representam os parâmetros posicionais passados para o script
--   `$#`: Indica o número total de parâmetros posicionais
--   `$@`: Representa todos os parâmetros posicionais como uma única string
--   `$?`: Retorna o código de saída do último comando executado
--   `$$`: Fornece o PID (Process ID) do script atual
--   `$!`: Retorna o PID do último processo em segundo plano iniciado pelo script
+- `$0`: Representa o nome do próprio script
+- `$1`, `$2`, etc.: Representam os parâmetros posicionais passados para o script
+- `$#`: Indica o número total de parâmetros posicionais
+- `$@`: Representa todos os parâmetros posicionais como uma única string
+- `$?`: Retorna o código de saída do último comando executado
+- `$$`: Fornece o PID (Process ID) do script atual
+- `$!`: Retorna o PID do último processo em segundo plano iniciado pelo script
 
 Essas variáveis especiais são muito úteis para **automatizar tarefas** e para a **tomada de decisões** dentro de scripts, permitindo que eles sejam **mais dinâmicos** e adaptem-se às condições de execução  
 Além das variáveis especiais mencionadas anteriormente, existem outras **variáveis de ambiente comuns** em Shell Script que fornecem informações úteis sobre o ambiente de execução do script. Aqui estão algumas delas:
 
--   `$HOME`: O diretório home do usuário atual
--   `$USER`: O nome do usuário atual
--   `$PWD`: O diretório de trabalho atual (presente)
--   `$SHELL`: O shell padrão do usuário
--   `$PATH`: Uma lista de diretórios onde o sistema procura por programas executáveis
--   `$LANG`: Define a configuração de idioma do sistema
--   `$HOSTNAME`: O nome do host da máquina
--   `$TERM`: O tipo de terminal que está sendo usado
--   `$EDITOR`: O editor de texto padrão
--   `$DISPLAY`: O display X11 (gráfico) onde os aplicativos devem ser exibidos
--   `$TZ`: O fuso horário atual
+- `$HOME`: O diretório home do usuário atual
+- `$USER`: O nome do usuário atual
+- `$PWD`: O diretório de trabalho atual (presente)
+- `$SHELL`: O shell padrão do usuário
+- `$PATH`: Uma lista de diretórios onde o sistema procura por programas executáveis
+- `$LANG`: Define a configuração de idioma do sistema
+- `$HOSTNAME`: O nome do host da máquina
+- `$TERM`: O tipo de terminal que está sendo usado
+- `$EDITOR`: O editor de texto padrão
+- `$DISPLAY`: O display X11 (gráfico) onde os aplicativos devem ser exibidos
+- `$TZ`: O fuso horário atual
 
 Essas variáveis de ambiente são frequentemente utilizadas em scripts para **adaptar o comportamento do script** com base no ambiente em que estão sendo executadas. Elas ajudam os scripts a serem mais **portáveis e flexíveis**, permitindo que eles funcionem em **diferentes sistemas** e **ambientes**
 
@@ -135,103 +136,103 @@ Os operadores **aritméticos** realizam **operações matemáticas**. Operadores
 
 ### Operadores aritméticos
 
--   `+` : **Soma**
-    -   Soma dois números
-    -   Exemplo: `2 + 3` resulta em `5`
--   `-` : **Subtração**
-    -   Subtrai um número de outro
-    -   Exemplo: `5 - 3` resulta em `2`
--   `*` : **Multiplicação**
-    -   Multiplica dois números
-    -   Exemplo: `2 * 3` resulta em `6`
--   `/` : **Divisão**
-    -   Divide um número por outro
-    -   Exemplo: `6 / 2` resulta em `3`
--   `%` : **Módulo** (resto da divisão)
-    -   Retorna o resto da divisão entre dois números
-    -   Exemplo: `7 % 3` resulta em `1`
--   `**` : **Exponenciação**
-    -   Eleva um número a uma potência
-    -   Exemplo: `2 ** 3` resulta em `8`
+- `+` : **Soma**
+  - Soma dois números
+  - Exemplo: `2 + 3` resulta em `5`
+- `-` : **Subtração**
+  - Subtrai um número de outro
+  - Exemplo: `5 - 3` resulta em `2`
+- `*` : **Multiplicação**
+  - Multiplica dois números
+  - Exemplo: `2 * 3` resulta em `6`
+- `/` : **Divisão**
+  - Divide um número por outro
+  - Exemplo: `6 / 2` resulta em `3`
+- `%` : **Módulo** (resto da divisão)
+  - Retorna o resto da divisão entre dois números
+  - Exemplo: `7 % 3` resulta em `1`
+- `**` : **Exponenciação**
+  - Eleva um número a uma potência
+  - Exemplo: `2 ** 3` resulta em `8`
 
 ### Operadores relacionais
 
--   `-eq` : **Igual a**
-    -   Verifica se dois valores são iguais
-    -   Exemplo: `5 -eq 5` retorna verdadeiro
--   `-ne` : **Diferente de**
-    -   Verifica se dois valores são diferentes
-    -   Exemplo: `5 -ne 3` retorna verdadeiro
--   `-gt` : **Maior que**
-    -   Verifica se o primeiro valor é maior que o segundo
-    -   Exemplo: `5 -gt 3` retorna verdadeiro
--   `-lt` : **Menor que**
-    -   Verifica se o primeiro valor é menor que o segundo
-    -   Exemplo: `3 -lt 5` retorna verdadeiro
--   `-ge` : **Maior ou igual a**
-    -   Verifica se o primeiro valor é maior ou igual ao segundo
-    -   Exemplo: `5 -ge 5` retorna verdadeiro
--   `-le` : **Menor ou igual a**
-    -   Verifica se o primeiro valor é menor ou igual ao segundo
-    -   Exemplo: `3 -le 5` retorna verdadeiro
+- `-eq` : **Igual a**
+  - Verifica se dois valores são iguais
+  - Exemplo: `5 -eq 5` retorna verdadeiro
+- `-ne` : **Diferente de**
+  - Verifica se dois valores são diferentes
+  - Exemplo: `5 -ne 3` retorna verdadeiro
+- `-gt` : **Maior que**
+  - Verifica se o primeiro valor é maior que o segundo
+  - Exemplo: `5 -gt 3` retorna verdadeiro
+- `-lt` : **Menor que**
+  - Verifica se o primeiro valor é menor que o segundo
+  - Exemplo: `3 -lt 5` retorna verdadeiro
+- `-ge` : **Maior ou igual a**
+  - Verifica se o primeiro valor é maior ou igual ao segundo
+  - Exemplo: `5 -ge 5` retorna verdadeiro
+- `-le` : **Menor ou igual a**
+  - Verifica se o primeiro valor é menor ou igual ao segundo
+  - Exemplo: `3 -le 5` retorna verdadeiro
 
 ### Operadores lógicos
 
--   `&&` : **E lógico**
-    -   Combina duas condições onde ambas precisam ser verdadeiras
-    -   Exemplo: `(2 -eq 2) && (3 -lt 5)` retorna verdadeiro
--   `||` : **OU lógico**
-    -   Combina duas condições onde pelo menos uma precisa ser verdadeira
-    -   Exemplo: `(2 -eq 3) || (3 -lt 5)` retorna verdadeiro
--   `!` : **NÃO lógico**
-    -   Inverte o resultado de uma condição
-    -   Exemplo: `!(2 -eq 3)` retorna verdadeiro
+- `&&` : **E lógico**
+  - Combina duas condições onde ambas precisam ser verdadeiras
+  - Exemplo: `(2 -eq 2) && (3 -lt 5)` retorna verdadeiro
+- `||` : **OU lógico**
+  - Combina duas condições onde pelo menos uma precisa ser verdadeira
+  - Exemplo: `(2 -eq 3) || (3 -lt 5)` retorna verdadeiro
+- `!` : **NÃO lógico**
+  - Inverte o resultado de uma condição
+  - Exemplo: `!(2 -eq 3)` retorna verdadeiro
 
 ### Operadores de atribuição
 
--   `=` : **Atribuição**
-    -   Atribui um valor a uma variável
-    -   Exemplo: `x=5`
--   `+=` : **Adição e atribuição**
-    -   Adiciona um valor a uma variável existente
-    -   Exemplo: `x+=2` onde `x` é 5, resulta em `x` igual a 7
--   `-=` : **Subtração e atribuição**
-    -   Subtrai um valor de uma variável existente
-    -   Exemplo: `x-=2` onde `x` é 7, resulta em `x` igual a 5
--   `*=` : **Multiplicação e atribuição**
-    -   Multiplica um valor por uma variável existente
-    -   Exemplo: `x*=2` onde `x` é 5, resulta em `x` igual a 10
--   `/=` : **Divisão e atribuição**
-    -   Divide uma variável existente por um valor
-    -   Exemplo: `x/=2` onde `x` é 10, resulta em `x` igual a 5
+- `=` : **Atribuição**
+  - Atribui um valor a uma variável
+  - Exemplo: `x=5`
+- `+=` : **Adição e atribuição**
+  - Adiciona um valor a uma variável existente
+  - Exemplo: `x+=2` onde `x` é 5, resulta em `x` igual a 7
+- `-=` : **Subtração e atribuição**
+  - Subtrai um valor de uma variável existente
+  - Exemplo: `x-=2` onde `x` é 7, resulta em `x` igual a 5
+- `*=` : **Multiplicação e atribuição**
+  - Multiplica um valor por uma variável existente
+  - Exemplo: `x*=2` onde `x` é 5, resulta em `x` igual a 10
+- `/=` : **Divisão e atribuição**
+  - Divide uma variável existente por um valor
+  - Exemplo: `x/=2` onde `x` é 10, resulta em `x` igual a 5
 
 ### Outros operadores
 
--   `>` : **Redirecionamento de saída**
-    -   Redireciona a saída padrão de um comando para um arquivo
-    -   Exemplo: `ls > lista_arquivos.txt` cria um arquivo `lista_arquivos.txt` com a saída do comando `ls`
--   `>>` : **Anexar saída a um arquivo**
-    -   Anexa a saída padrão de um comando a um arquivo existente
-    -   Exemplo: `echo "Nova linha" >> arquivo.txt` adiciona "Nova linha" ao final de `arquivo.txt`
--   `<` : **Redirecionamento de entrada**
-    -   Fornece entrada padrão de um arquivo para um comando
-    -   Exemplo: `cat < arquivo.txt` exibe o conteúdo de `arquivo.txt` no terminal
--   `<<` : **Aqui documento (redirecionamento de entrada)**
-    -   Permite entrada de múltiplas linhas diretamente no terminal
-    -   Exemplo: `cat << FIM` permite inserir várias linhas de texto até que `FIM` seja digitado
--   `&>` : **Redirecionar saída padrão e de erro para o mesmo local**
-    -   Redireciona tanto a saída padrão quanto a saída de erro de um comando para o mesmo local
-    -   Exemplo: `ls /arquivo/inexistente &> log.txt` redireciona tanto a saída de erro quanto a saída padrão do comando `ls` para o arquivo `log.txt`
+- `>` : **Redirecionamento de saída**
+  - Redireciona a saída padrão de um comando para um arquivo
+  - Exemplo: `ls > lista_arquivos.txt` cria um arquivo `lista_arquivos.txt` com a saída do comando `ls`
+- `>>` : **Anexar saída a um arquivo**
+  - Anexa a saída padrão de um comando a um arquivo existente
+  - Exemplo: `echo "Nova linha" >> arquivo.txt` adiciona "Nova linha" ao final de `arquivo.txt`
+- `<` : **Redirecionamento de entrada**
+  - Fornece entrada padrão de um arquivo para um comando
+  - Exemplo: `cat < arquivo.txt` exibe o conteúdo de `arquivo.txt` no terminal
+- `<<` : **Aqui documento (redirecionamento de entrada)**
+  - Permite entrada de múltiplas linhas diretamente no terminal
+  - Exemplo: `cat << FIM` permite inserir várias linhas de texto até que `FIM` seja digitado
+- `&>` : **Redirecionar saída padrão e de erro para o mesmo local**
+  - Redireciona tanto a saída padrão quanto a saída de erro de um comando para o mesmo local
+  - Exemplo: `ls /arquivo/inexistente &> log.txt` redireciona tanto a saída de erro quanto a saída padrão do comando `ls` para o arquivo `log.txt`
 
 Estes são os operadores fundamentais usados em Shell Script. Eles permitem fazer **cálculos**, **comparar valores**, **controlar o fluxo** de execução e **gerenciar a entrada e saída de dados** nos scripts  
 Agora, voltando aos operadores `=` e `!=` eles podem ser usados em vários contextos, principalmente em **estruturas de controle de fluxo**, como `if`, `elif` e `case`, para comparar valores e tomar decisões baseadas nessas comparações
 
--   `=` : **Teste de igualdade (em alguns contextos)**
-    -   Verifica se dois valores são iguais
-    -   Exemplo: `[ "{$x}" = "{$y}" ]` verifica se as variáveis `x` e `y` são iguais
--   `!=` : **Teste de desigualdade (em alguns contextos)**
-    -   Verifica se dois valores são diferentes
-    -   Exemplo: `[ "{$x}" != "{$y}" ]` verifica se as variáveis `x` e `y` são diferentes
+- `=` : **Teste de igualdade (em alguns contextos)**
+  - Verifica se dois valores são iguais
+  - Exemplo: `[ "{$x}" = "{$y}" ]` verifica se as variáveis `x` e `y` são iguais
+- `!=` : **Teste de desigualdade (em alguns contextos)**
+  - Verifica se dois valores são diferentes
+  - Exemplo: `[ "{$x}" != "{$y}" ]` verifica se as variáveis `x` e `y` são diferentes
 
 Além disso, eles também são frequentemente usados em expressões condicionais em **comandos de teste**, como `[ ]` (ou `test`), para verificar condições  
 Por exemplo, em um `if` _statement_:
@@ -312,9 +313,9 @@ esac
 
 No exemplo acima:
 
--   Se `$opcao` for igual a 1, o script imprimirá "Opção 1 selecionada."
--   Se `$opcao` for igual a 2, o script imprimirá "Opção 2 selecionada."
--   Caso contrário, se `$opcao` não corresponder a nenhum dos padrões especificados, o script imprimirá "Opção inválida."
+- Se `$opcao` for igual a 1, o script imprimirá "Opção 1 selecionada."
+- Se `$opcao` for igual a 2, o script imprimirá "Opção 2 selecionada."
+- Caso contrário, se `$opcao` não corresponder a nenhum dos padrões especificados, o script imprimirá "Opção inválida."
 
 A estrutura `case` é especialmente útil quando há **várias opções a serem consideradas** e simplifica o código em comparação com múltiplos `if` e `elif`. Ela é amplamente utilizada em scripts de Shell Script para lidar com várias condições de forma clara e concisa  
 Neste exemplo, o script executa um bloco de código dependendo do valor da variável `opcao`
@@ -456,22 +457,22 @@ Os mecanismos de cotação referem-se à forma como você delimita strings ou ex
 
 1. **Aspas Simples (' '):** Quando você envolve uma string entre aspas simples, o conteúdo é interpretado literalmente. Nenhuma expansão de variável ou caracteres especiais dentro da string é realizada. Por exemplo:
 
-    ```bash
-    echo 'Olá, $USER'  # Saída será: Olá, $USER
-    ```
+   ```bash
+   echo 'Olá, $USER'  # Saída será: Olá, $USER
+   ```
 
 2. **Aspas Duplas (" "):** As aspas duplas permitem a expansão de variáveis dentro da string. Além disso, certos caracteres especiais são interpretados de forma especial (por exemplo, `\n` é interpretado como uma nova linha). Por exemplo:
 
-    ```bash
-    echo "Olá, $USER"  # Saída será: Olá, [nome do usuário atual]
-    ```
+   ```bash
+   echo "Olá, $USER"  # Saída será: Olá, [nome do usuário atual]
+   ```
 
 3. **Cotação entre Acentos Grave (\` \`):** Também conhecida como acentos invertidos ou backticks, isso permite que você execute comandos dentro da string e use a saída desse comando. Por exemplo:
 
-    ```bash
-    files=`ls`
-    echo "Arquivos no diretório atual: $files"
-    ```
+   ```bash
+   files=`ls`
+   echo "Arquivos no diretório atual: $files"
+   ```
 
 Aqui, o comando `ls` é executado e a saída é atribuída à variável `files`
 
@@ -699,8 +700,23 @@ minha_funcao "João"
 
 ---
 
--   **Reutilização de Código:** Você pode definir uma função uma vez e usá-la várias vezes em seu script
--   **Organização do Código:** Funções permitem dividir o código em partes menores e mais gerenciáveis, facilitando a manutenção
--   **Legibilidade:** Ao atribuir tarefas específicas a funções com nomes descritivos, o código se torna mais fácil de entender e depurar
+- **Reutilização de Código:** Você pode definir uma função uma vez e usá-la várias vezes em seu script
+- **Organização do Código:** Funções permitem dividir o código em partes menores e mais gerenciáveis, facilitando a manutenção
+- **Legibilidade:** Ao atribuir tarefas específicas a funções com nomes descritivos, o código se torna mais fácil de entender e depurar
 
-Parabéns por chegar até o final! :) Se encontrar algum erro, sinta-se à vontade para abrir um problema ou contribuir com o projeto
+## Fontes e referências
+
+Aqui estão algumas fontes valiosas que podem enriquecer sua jornada de aprendizado:
+
+1. **Documentação Oficial do Bash**: Para um entendimento sólido dos fundamentos e funcionalidades avançadas do Bash, o interpretador de comandos shell mais comum, a documentação oficial é uma fonte indispensável. Ela pode ser encontrada no site GNU: [Documentação Oficial do Bash](https://www.gnu.org/software/bash/manual/)
+
+2. **Tutoriais Online**: A internet oferece uma ampla gama de tutoriais para ajudá-lo a dominar o Shell Script. Alguns sites populares incluem:
+   - **[Linuxize](https://linuxize.com/)**: Oferece tutoriais e guias detalhados sobre Shell Script
+   - **[Shell Scripting Tutorial](https://www.shellscript.sh/)**: Um tutorial abrangente com exemplos e exercícios práticos para aprender Shell Script
+   - [**Shell Scripting Tutorial - Tutorialspoint**](https://www.tutorialspoint.com/unix/shell_scripting.htm): Este tutorial abrangente oferece uma introdução passo a passo ao Shell Scripting, cobrindo desde conceitos básicos até técnicas avançadas
+
+3. **Fóruns e Comunidades Online**: Participar de fóruns e comunidades é uma excelente maneira de obter suporte e compartilhar conhecimentos com outros entusiastas de Shell Script. Alguns espaços populares incluem:
+   - **[Unix & Linux Stack Exchange](https://unix.stackexchange.com/)**: Uma comunidade de perguntas e respostas que aborda sistemas Unix e Linux
+   - **[Reddit - r/bash](https://www.reddit.com/r/bash/)**: Um subreddit dedicado a discussões sobre Bash e Shell Script
+
+É importante ressaltar que o Shell Script é uma área vasta e em constante evolução. Portanto, explorar diversas fontes é essencial para obter uma compreensão completa e atualizada desse campo dinâmico
